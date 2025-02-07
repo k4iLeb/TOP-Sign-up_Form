@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "cocogooseprotrialregular";
+  src: url("./fonts/cocogoose-pro-regular-trial-webfont.woff2") format("woff2"),
+    url("./fonts/cocogoose-pro-regular-trial-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "coolveticaregular";
+  src: url("./fonts/coolvetica_rg-webfont.woff2") format("woff2"),
+    url("./fonts/coolvetica_rg-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-blue: rgb(100, 134, 185);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,6 +53,7 @@ body {
 }
 
 .img-container > p {
+  letter-spacing: normal;
   font-size: 0.9rem;
   padding: 2px 5px;
   position: absolute;
@@ -53,26 +74,44 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
 }
 .logo-container > span {
-  font-size: 3rem;
+  font-family: "coolveticaregular", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 2.4rem;
 }
 
 .logo-container > img {
   max-width: 100px;
 }
 
+h1,
+legend,
+label,
+.form-container p {
+  font-family: "coolveticaregular", sans-serif;
+  letter-spacing: 2px;
+}
+.form-container p {
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+.form-container p > a {
+  color: var(--color-blue);
+}
+
 .form-container {
   width: 60%;
-  background-color: #f9fafb;
+  background-color: #ebf5ff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
 }
 
-.form-container h2,
+.form-container h1,
 .form-container p,
 .form-container form {
   padding-left: 30px;
@@ -81,11 +120,10 @@ body {
 .form-container input,
 .form-container button {
   -webkit-appearance: none;
-}
 
-/* .form-container input {
-  line-height: 1.3rem;
-} */
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 5px;
+}
 
 form {
   background-color: white;
@@ -111,6 +149,15 @@ legend {
   padding: 2px 5px;
   height: 35px;
   width: 300px;
+}
+.form-container input[type="password"] {
+  border: 1px solid rgb(220 60 60);
+}
+
+.form-container input:focus {
+  outline: none;
+  border: 1px solid var(--color-blue);
+  box-shadow: 0px 0px 3px rgb(160, 159, 159);
 }
 
 .form-inputs {
