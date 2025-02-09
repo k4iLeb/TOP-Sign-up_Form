@@ -22,6 +22,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a,
@@ -54,12 +55,13 @@ body {
 
 .img-container > p {
   letter-spacing: normal;
+  text-align: center;
   font-size: 0.9rem;
   padding: 2px 5px;
   position: absolute;
   bottom: 2%;
-  left: calc(45% / 2);
-  width: 55%;
+  left: calc(42% / 2);
+  width: 58%;
   background-color: #ffffff70;
   color: black;
 }
@@ -150,14 +152,18 @@ legend {
   height: 35px;
   width: 300px;
 }
-.form-container input[type="password"] {
-  border: 1px solid rgb(220 60 60);
-}
+
+/* .form-container input[type="password"] {
+} */
 
 .form-container input:focus {
   outline: none;
   border: 1px solid var(--color-blue);
   box-shadow: 0px 0px 3px rgb(160, 159, 159);
+}
+
+.form-container input:invalid {
+  border: 1px solid rgb(220 60 60);
 }
 
 .form-inputs {
@@ -171,4 +177,16 @@ legend {
   font-size: inherit;
   width: 35%;
   font-weight: bold;
+  border: var(--color-blue);
+  background-color: var(--color-blue);
+  color: white;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #81a3d6;
+}
+
+.form-container button:active {
+  box-shadow: inset 0px 0px 5px rgb(53, 52, 52);
 }
